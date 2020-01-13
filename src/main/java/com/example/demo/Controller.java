@@ -28,7 +28,7 @@ private BeerClient beerClient;
     @PostMapping(value = "/beerInfo/{beerId}")
     public ResponseEntity<?> postBeer(@PathVariable ("beerId") Long beerId){
 
-        return new ResponseEntity<>(beerClient.getBeer(beerId),HttpStatus.OK);
+        return new ResponseEntity<>(beerClient.getBeer(beerId),HttpStatus.OK); // to jest zle bo  getBeer(beerId) zwraca piwo
 
     }
 }
